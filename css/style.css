@@ -7,10 +7,11 @@
 html,
 body {
   height: 100%;
+  
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  font-family:'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -67,7 +68,6 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
 }
 
 .header__container {
@@ -76,12 +76,19 @@ p {
   align-items: center;
   max-width: 1370px;
   column-gap: 10px;
+  text-align: center;
 }
 
 .logo {
   display: block;
   max-width: 187px;
   min-width: 81px;
+}
+
+.logo__img {
+}
+
+.nav {
 }
 
 .nav__list {
@@ -103,47 +110,86 @@ p {
   color: rgba(255, 255, 255, 1);
 }
 
-.header__contact {
-  column-gap: 52px;
-  display: flex;
+.header__contact{
+    column-gap: 52px;
+    display: flex;
 }
 
-.location,
-.tel {
+.location, .tel {
   color: rgba(255, 255, 255, 1);
   font-style: normal;
   font-size: 16px;
   line-height: 1.13;
 }
 
-.main {
+@media (max-width: 960px) {
+  .container {
+    max-width: 898px;
+  } 
+
+  .logo {
+    max-width: 181px;
+  }
+
+  .location {
+    display: none;
+  }
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 722px;
+  } 
+
+  .logo {
+    max-width: 142px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__contact {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  } 
+
+  .logo {
+    max-width: 81px;
+  }
+}
+
+
+.main {
+
+}
 .hero {
   height: 100vh;
-  background: url(../img/bg/кузовной_ремонт.png) no-repeat center / cover;
+  background: url(../img/bg/кузовной_ремонт.png)no-repeat left top/cover;
   padding-top: 272px;
-  color: #ffffff;
+  color: white;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
 }
 
-.hero__container {
+.hero__container{
   flex: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
-  z-index: 10px;
 }
 
 .hero__main {
   flex: 1;
-  padding-left: 95px;
 }
-
 .title {
-  font-family: "Roboto";
+  font-family:'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -153,9 +199,8 @@ p {
 .hero .title {
   margin-bottom: 17px;
 }
-
-.hero__sudtitle {
-  font-family: "Roboto";
+.hero__subtitle {
+  font-family:'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -171,29 +216,26 @@ p {
 
 .btn {
   background: none;
+  border: 2px solid white ;
   border-radius: 4px;
-  text-align: center;
+  text-align: center ;
   min-width: 170px;
-  display: inline-block;
   padding: 12px 16px;
 }
 
-.btn.btn_theme_white {
-  border: 2px solid #ffffff;
+.btn.btn_theme_white{
+  border: 2px solid white ;
   color: #ffffff;
-}
 
+}
 .hero__call-to-action span {
-  color: #ed7173;
-}
+  color: #ED7173;
 
+}
 .advantages {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  column-gap: 24px;
 }
-
 .advantage {
   text-align: center;
   border-radius: 4px;
@@ -201,39 +243,54 @@ p {
 }
 
 .hero__advantage {
-  border: 2px solid #ffffff;
   flex: 0 1 276px;
+  border: 2px solid white ;
 }
 
 .advantage__img {
-  width: 30px;
-  height: 30px;
   margin-bottom: 14px;
 }
+.advantage__desc {
+}
 
+@media (max-width: 960px) {
+  .title {
+    font-size: 42px;
+
+  }
+
+  .hero__subtitle {
+    font-size: 22px;
+    margin-bottom: 70px;
+  }
+}
 .about {
   padding: 65px 0px 90px;
 }
-
+.container {
+}
 .about__container {
   max-width: 922px;
 }
-
 .section__title {
-  font-family: "Roboto";
   font-weight: 700;
   font-size: 54px;
   line-height: 1.17;
   text-align: center;
   margin-bottom: 10px;
+  font-family: Roboto;
 }
 
-.section__title_color_grey {
+.section__title_color_grey{
   color: #e7e7e7;
 }
 
+.section__title_color_white{
+  color: white;
+}
 .section__subtitle {
-  font-family: "Arial";
+  font-family: 'Arial';
+  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.15;
@@ -242,10 +299,9 @@ p {
   margin-bottom: 60px;
 }
 
-.about .section__subtitle {
-  margin-bottom: 20px;
+.about .section__subtitle{
+margin-bottom: 20px;
 }
-
 .about__list {
   display: flex;
   width: 100%;
@@ -254,497 +310,76 @@ p {
   row-gap: 51px;
   counter-reset: item-count;
 }
-
 .about__item {
   width: 48%;
   position: relative;
   padding: 70px 0px 0px 30px;
-
-
 }
 .about__text {
- z-index: 10;
- position: relative;
+  z-index: 10;
+  position: relative;
 }
 
-.about__item::before {
+.about__item::before{
   counter-increment: item-count;
-  content: "0"counter(item-count);
-  font-family: "Roboto";
+  content: "0" counter(item-count);
+  font-family: 'Roboto';
   font-weight: 700;
   font-size: 100px;
   line-height: 1;
-  color: #e7e7e7;
   position: absolute;
+  color: #e7e7e7;
   top: 0;
   left: 0;
+}
+
+.service {
+}
+.container {
+}
+.service__container {
+}
+.section__title {
+}
+.section__title_color_grey {
+  color: #e7e7e7;
+}
+.section__subtitle {
+}
+.service__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.service__item {
+  border: 2px solid #D4D4D4;
+  width: 23%;
+  margin-bottom: 14px;
+}
+.service__link {
+  display: block;
+  text-align: center;
   
 }
 
-.benefits {
-  padding: 62px 0 10px;
-  height: 570px;
-  background: url(../img/bg/car-bg.jpg) no-repeat center/ cover;
-  display: flex;
-  flex-direction: column;
+.service__item-img-wrap {
+
+}
+.service__item-text {
+    text-align: center;
+    display: block;
+    padding: ;
 }
 
-.section__title_color_white {
-  color: #ffffff;
+.service__items {
+  padding: 20px 0px;
+  position: relative;
 }
 
-.benefits__advantages {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  padding: 16px;
-}
-
-.benefit {
+.service__btn {
   text-align: center;
-  border-radius: 4px;
-  background-color: #ffffff;
-  flex: 0 1 211px;
-  column-gap: 16px;
-  padding: 40px 5px 0;
-}
+  padding: 56px 0px;
 
-.benefit__desc {
-  padding: 30px 0 18px;
-  font-size: 16px;
-}
-
-@media (max-width: 960px) {
-  .container {
-    max-width: 898px;
-  }
-
-  .logo {
-    max-width: 181px;
-  }
-
-  .header .location {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 210px;
-  }
-
-  .hero__main {
-    padding-left: 73px;
-  }
-
-  .title {
-    font-size: 42px;
-  }
-
-  .hero__sudtitle {
-    font-size: 22px;
-    margin-bottom: 70px;
-  }
-
-  .detailed__title {
-    font-size: 40px;
-  }
-
-  .detailed__subtitle {
-    font-size: 16px;
-  }
-
-  .detailed__desc {
-    font-size: 16px;
-  }
-
-  .desc__item {
-    padding: 0 96px 123px 0;
-  }
-
-  .benefits {
-    height: 394px;
-  }
-
-  .abvantages__title {
-    font-size: 40px;
-    padding-top: 45px;
-  }
-
-  .advantages__subtitle {
-    font-size: 16px;
-    padding-bottom: 45px;
-  }
-
-  .benefits__advantages {
-    column-gap: 14px;
-  }
-
-  .benefit {
-    width: 167px;
-    height: 118px;
-    padding-top: 19px;
-  }
-
-  .benefit__img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .benefit__desc {
-    padding: 13px 0;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-  }
-
-  .container {
-    max-width: 722px;
-  }
-
-  .logo {
-    max-width: 142px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .header__contact {
-    display: none;
-  }
-
-  .burger {
-    width: 47px;
-    height: 31px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .burger__el,
-  .burger__el::before,
-  .burger__el::after {
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 11px;
-  }
-
-  .burger__el::before,
-  .burger__el::after {
-    content: "";
-    position: absolute;
-  }
-
-  .burger__el::before {
-    top: 0;
-    left: 0;
-  }
-
-  .burger__el::after {
-    bottom: 0;
-    right: 0;
-    width: 83%;
-  }
-
-  .hero {
-    padding-top: 170px;
-    position: relative;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 19.11%
-    );
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  .advantage {
-    font-size: 14px;
-  }
-
-  .advantage__img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 11px;
-  }
-
-  .detailed__title {
-    font-size: 35px;
-  }
-
-  .detailed__subtitle {
-    font-size: 14px;
-  }
-
-  .detailed__desc {
-    font-size: 14px;
-  }
-
-  .desc__item {
-    padding: 0 54px 78px 0;
-  }
-
-  .benefits {
-    height: 355px;
-  }
-
-  .abvantages__title {
-    font-size: 30px;
-    padding-top: 40px;
-  }
-
-  .advantages__subtitle {
-    font-size: 14px;
-    padding-bottom: 30px;
-  }
-
-  .benefits__advantages {
-    column-gap: 11px;
-  }
-
-  .benefit {
-    width: 134px;
-    height: 123px;
-    padding-top: 16px;
-  }
-
-  .benefit__img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .benefit__desc {
-    padding: 11px 0;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 320px) {
-  .container {
-    max-width: 300px;
-  }
-
-  .logo {
-    max-width: 81px;
-  }
-
-  .burger {
-    width: 29px;
-    height: 19px;
-  }
-
-  .burger__el,
-  .burger__el::before,
-  .burger__el::after {
-    height: 3px;
-  }
-
-  .burger__el::after {
-    width: 78%;
-  }
-
-  .hero {
-    padding-top: 120px;
-  }
-
-  .hero__main {
-    padding-left: 83px;
-  }
-
-  .title {
-    font-size: 25px;
-  }
-
-  .hero .title {
-    margin-bottom: 5px;
-  }
-
-  .hero__sudtitle {
-    font-size: 14px;
-    margin-bottom: 33px;
-  }
-
-  .hero__btns {
-    flex-wrap: wrap;
-    row-gap: 14px;
-  }
-
-  .btn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .advantages {
-    flex-direction: column;
-    padding: 0 20px;
-    column-gap: 24px;
-    row-gap: 10px;
-  }
-
-  .advantage {
-    text-align: left;
-    flex: 0 1 56px;
-  }
-
-  .advantage__img {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-  }
-
-  .advantage__img path {
-    fill: black;
-  }
-
-  .advantage__desc {
-    color: black;
-  }
-
-  .detailed__title {
-    font-size: 15px;
-  }
-
-  .detailed__subtitle {
-    font-size: 12px;
-  }
-
-  .detailed__desc {
-    font-size: 12px;
-  }
-
-  .desc__item {
-    padding: 0 23px 56px 0;
-  }
-
-  .benefits {
-    height: 355px;
-  }
-
-  .abvantages__title {
-    font-size: 15px;
-  }
-
-  .advantages__subtitle {
-    font-size: 12px;
-  }
-
-  .benefits__advantages {
-    flex-direction: column;
-    row-gap: 10px;
-    column-gap: 11px;
-  }
-
-  .benefit__img {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    max-width: 95%;
-  }
-
-  .header__container {
-    max-width: 95%;
-  }
-
-  .logo {
-    max-width: 81px;
-  }
-
-  .burger {
-    width: 29px;
-    height: 19px;
-  }
-
-  .burger__el,
-  .burger__el::before,
-  .burger__el::after {
-    height: 3px;
-  }
-
-  .burger__el::after {
-    width: 78%;
-  }
-
-  .hero {
-    padding-top: 120px;
-  }
-
-  .hero__main {
-    padding-left: 0px;
-  }
-
-  .title {
-    font-size: 25px;
-  }
-
-  .hero .title {
-    margin-bottom: 5px;
-  }
-
-  .hero__sudtitle {
-    font-size: 14px;
-    margin-bottom: 33px;
-  }
-
-  .hero__btns {
-    flex-wrap: wrap;
-    row-gap: 14px;
-  }
-
-  .btn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .advantages {
-    flex-direction: column;
-    padding: 0 20px;
-    column-gap: 24px;
-    row-gap: 10px;
-  }
-
-  .advantage {
-    text-align: left;
-    border-radius: 4px;
-    background-color: #ffffff;
-    flex: 0 1 56px;
-  }
-
-  .hero__advantage {
-    display: flex;
-    border: 2px solid #ffffff;
-    align-items: center;
-    column-gap: 28px;
-    width: 100%;
-  }
-
-  .advantage__img {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-  }
-
-  .advantage__img path {
-    fill: black;
-  }
-
-  .advantage__desc {
-    color: black;
-  }
 }
