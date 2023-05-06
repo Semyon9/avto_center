@@ -1,0 +1,194 @@
+font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Medium Obl'), local('FuturaNewMedium-Obl'),
+        url('font/FuturaNewMedium-Obl.woff2') format('woff2'),
+        url('font/FuturaNewMedium-Obl.woff') format('woff'),
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura New Demi';
+    src: local('Futura New Demi Obl'), local('FuturaNewDemi-Obl'),
+        url('font/FuturaNewDemi-Obl.woff2') format('woff2'),
+        url('font/FuturaNewDemi-Obl.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Medium Reg'), local('FuturaNewMedium-Reg'),
+        url('font/FuturaNewMedium-Reg.woff2') format('woff2'),
+        url('font/FuturaNewMedium-Reg.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Heavy Reg'), local('FuturaNewHeavy-Reg'),
+        url('font/FuturaNewHeavy-Reg.woff2') format('woff2'),
+        url('font/FuturaNewHeavy-Reg.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Light Obl'), local('FuturaNewLight-Obl'),
+        url('font/FuturaNewLight-Obl.woff2') format('woff2'),
+        url('font/FuturaNewLight-Obl.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New ExtraBold Obl'), local('FuturaNewExtraBold-Obl'),
+        url('font/FuturaNewExtraBold-Obl.woff2') format('woff2'),
+        url('font/FuturaNewExtraBold-Obl.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Bold Obl'), local('FuturaNewBold-Obl'),
+        url('font/FuturaNewBold-Obl.woff2') format('woff2'),
+        url('font/FuturaNewBold-Obl.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New ExtraBold Reg'), local('FuturaNewExtraBold-Reg'),
+        url('font/FuturaNewExtraBold-Reg.woff2') format('woff2'),
+        url('font/FuturaNewExtraBold-Reg.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Light Reg'), local('FuturaNewLight-Reg'),
+        url('font/FuturaNewLight-Reg.woff2') format('woff2'),
+        url('font/FuturaNewLight-Reg.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Bold Reg'), local('FuturaNewBold-Reg'),
+        url('font/FuturaNewBold-Reg.woff2') format('woff2'),
+        url('font/FuturaNewBold-Reg.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura New';
+    src: local('Futura New Heavy Obl'), local('FuturaNewHeavy-Obl'),
+        url('font/FuturaNewHeavy-Obl.woff2') format('woff2'),
+        url('font/FuturaNewHeavy-Obl.woff') format('woff');
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Futura New', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 130px;
+    
+}
+
+.logo {
+    margin-right: 235px;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+
+}
+
+
+.nav__link {
+    color: #C3B9B5;
+    text-transform: uppercase;
+}
+
+/* .nav__item {
+    margin-right: 80px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+} */
+
+.nav,
+.pagination {
+    font-family: 'Futura New', sans-serif;
+    font-weight: 700;
+}
+
+.title {
+    font-family: 'Lora', serif;
+}
+
+.pagination__item {
+    margin-bottom: 70px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination__item.active {
+    font-family: 'Lora', serif;
+}
+
+
